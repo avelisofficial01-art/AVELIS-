@@ -1,0 +1,270 @@
+<!DOCTYPE html>
+<html lang="vi">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="icon" type="image/jpeg" href="./assets/avata.jpg">
+  <title>Chi Tiết Bài Viết – AVELIS</title>
+  <meta name="description" content="Chi tiết bài viết từ AVELIS - Nước hoa cá nhân hóa theo cơ địa." />
+  <link type="text/css" rel="stylesheet" href="./css/showHideNav.css" />
+  <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet" />
+  <link href="./dist/output.css" rel="stylesheet" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link
+    href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;0,700;1,300;1,400&family=Inter:wght@300;400;500;600&display=swap"
+    rel="stylesheet" />
+  <script src="https://code.jquery.com/jquery-3.7.1.min.js" defer></script>
+  <script src="./js/jquery.hidescroll.js" defer></script>
+  <script defer src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+  <script defer type="module" src="./js/main.js"></script>
+  <style>
+    body {
+      font-family: 'Inter', sans-serif;
+      background: hsl(40, 20%, 98%);
+    }
+
+    h1,
+    h2,
+    h3,
+    h4 {
+      font-family: 'Cormorant Garamond', serif;
+    }
+
+    .article-content p {
+      margin-bottom: 1.5rem;
+      line-height: 1.8;
+      color: hsl(0, 0%, 25%);
+      font-size: 1rem;
+    }
+
+    .article-content p:last-child {
+      margin-bottom: 0;
+    }
+  </style>
+</head>
+
+<body>
+  <!-- NAV -->
+  <header class="relative z-50">
+    <div class="flex items-center justify-center navbar bg-p-50/95 backdrop-blur-sm border-b border-n-100">
+      <div class="max-w-[1536px] w-full px-6 py-5 md:py-6 md:px-[72px] flex items-center justify-between">
+        <a href="./index.html" class="flex items-center gap-3 flex-none">
+          <div class="flex flex-col leading-none">
+            <span
+              style="font-family:'Cormorant Garamond',serif; font-size:1.6rem; font-weight:600; letter-spacing:0.25em; color:hsl(0,0%,10%)">AVELIS</span>
+            <span
+              style="font-size:0.55rem; letter-spacing:0.35em; text-transform:uppercase; color:hsl(43,74%,49%); font-family:'Inter',sans-serif; margin-top:1px">Your
+              Scent</span>
+          </div>
+        </a>
+        <nav class="items-center justify-end hidden w-full gap-8 lg:flex">
+          <a href="./products.html" class="navLink">Sản Phẩm</a>
+          <a href="./about.html" class="navLink">Giới Thiệu</a>
+          <a href="./blog.html" class="navLink" style="color:hsl(43,74%,49%)">Blog</a>
+          <a href="./news.html" class="navLink">Tin Tức</a>
+          <a href="./contact.html" class="navLink">Liên Hệ</a>
+        </nav>
+        <div class="block cursor-pointer lg:hidden" id="toggle_btn">
+          <svg width="22" height="22" viewBox="0 0 22 22" fill="none">
+            <line x1="2" y1="5" x2="20" y2="5" stroke="hsl(0,0%,10%)" stroke-width="1.5" />
+            <line x1="2" y1="11" x2="20" y2="11" stroke="hsl(0,0%,10%)" stroke-width="1.5" />
+            <line x1="2" y1="17" x2="20" y2="17" stroke="hsl(0,0%,10%)" stroke-width="1.5" />
+          </svg>
+        </div>
+        <div class="dropdown-menu lg:hidden">
+          <a href="./products.html" class="navLink mobileNavLink">Sản Phẩm</a>
+          <a href="./about.html" class="navLink mobileNavLink">Giới Thiệu</a>
+          <a href="./blog.html" class="navLink mobileNavLink">Blog</a>
+          <a href="./news.html" class="navLink mobileNavLink">Tin Tức</a>
+          <a href="./contact.html" class="navLink mobileNavLink">Liên Hệ</a>
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <!-- BREADCRUMBS & BACK BUTTON -->
+  <div class="bg-p-50 py-4 border-b border-n-100">
+    <div class="container mx-auto px-6 max-w-4xl">
+      <div class="flex items-center gap-2 text-xs font-inter text-n-500">
+        <a href="./index.html" class="hover:text-p-500 transition-colors">Trang Chủ</a>
+        <span>·</span>
+        <a href="./blog.html" class="hover:text-p-500 transition-colors">Blog</a>
+        <span>·</span>
+        <span class="text-n-800 line-clamp-1" id="breadcrumb-title">Đang tải...</span>
+      </div>
+    </div>
+  </div>
+
+  <!-- ARTICLE DETAIL CONTAINER -->
+  <main class="py-12 md:py-20">
+    <article class="container mx-auto px-6 max-w-4xl" data-aos="fade-up">
+      <!-- Back Button -->
+      <a href="./blog.html" class="inline-flex items-center gap-2 text-xs font-inter tracking-widest uppercase text-p-600 hover:text-p-500 transition-colors mb-8 group">
+        <svg class="transform group-hover:-translate-x-1 transition-transform" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+          <line x1="19" y1="12" x2="5" y2="12"></line>
+          <polyline points="12 19 5 12 12 5"></polyline>
+        </svg>
+        Quay lại danh sách
+      </a>
+
+      <!-- Article Header -->
+      <header class="mb-10">
+        <div class="flex items-center gap-3 text-xs font-inter tracking-widest uppercase text-p-500 mb-4">
+          <span id="post-category" class="bg-p-200/50 text-p-600 px-2.5 py-1 rounded">DANH MỤC</span>
+          <span>·</span>
+          <span id="post-readtime">5 PHÚT ĐỌC</span>
+          <span>·</span>
+          <span id="post-date">17/06/2026</span>
+        </div>
+        <h1 id="post-title" class="text-3xl md:text-5xl lg:text-6xl text-n-900 leading-tight font-normal mb-6">
+          Đang tải bài viết...
+        </h1>
+        <div style="width:50px; height:1px; background:hsl(43,74%,49%)"></div>
+      </header>
+
+      <!-- Main Image -->
+      <div class="mb-12 overflow-hidden rounded-xl shadow-lg border border-n-100 max-h-[500px]">
+        <img id="post-image" src="" alt="" class="w-full h-full object-cover" style="display: none;" />
+      </div>
+
+      <!-- Article Body -->
+      <div id="post-content" class="article-content font-inter text-base md:text-lg">
+        <!-- Rendered paragraphs will go here -->
+      </div>
+    </article>
+  </main>
+
+  <!-- RELATED POSTS -->
+  <section class="bg-p-50 py-16 border-t border-n-100">
+    <div class="container mx-auto px-6 max-w-6xl">
+      <div class="text-center mb-12" data-aos="fade-up">
+        <h2 class="sub_heading">Có Thể Bạn Quan Tâm</h2>
+        <h3 class="main_heading" style="font-size: 2.2rem;">Bài Viết <span class="text-gradient">Liên Quan</span></h3>
+      </div>
+      <div id="related-posts-grid" class="grid grid-cols-1 md:grid-cols-3 gap-6">
+        <!-- Suggestions loaded here -->
+      </div>
+    </div>
+  </section>
+
+  <!-- FOOTER -->
+  <footer class="bg-p-950 border-t border-n-800">
+    <div class="container mx-auto py-8 px-6">
+      <div class="flex flex-col md:flex-row justify-between items-center gap-4">
+        <span
+          style="font-family:'Cormorant Garamond',serif; font-size:1.5rem; letter-spacing:0.25em; color:white">AVELIS</span>
+        <p class="text-white/30 text-xs font-inter">© 2025 AVELIS. All rights reserved.</p>
+        <div class="flex gap-6">
+          <a href="./index.html" class="text-white/40 hover:text-p-400 text-xs font-inter transition-colors">Trang
+            Chủ</a>
+          <a href="./products.html" class="text-white/40 hover:text-p-400 text-xs font-inter transition-colors">Sản
+            Phẩm</a>
+          <a href="./contact.html" class="text-white/40 hover:text-p-400 text-xs font-inter transition-colors">Liên
+            Hệ</a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <script>
+    document.addEventListener('DOMContentLoaded', function () {
+      const urlParams = new URLSearchParams(window.location.search);
+      const postId = urlParams.get('id');
+
+      if (!postId) {
+        showErrorPage('Không tìm thấy tham số bài viết.');
+        return;
+      }
+
+      fetch('./data/blog-posts.json')
+        .then(res => res.json())
+        .then(posts => {
+          const post = posts.find(p => p.id === postId);
+
+          if (!post) {
+            showErrorPage('Bài viết không tồn tại.');
+            return;
+          }
+
+          // Render Main Post details
+          document.title = `${post.title} – AVELIS | Nước Hoa Cá Nhân Hóa`;
+          document.getElementById('breadcrumb-title').textContent = post.title;
+          document.getElementById('post-title').textContent = post.title;
+          document.getElementById('post-category').textContent = post.category;
+          document.getElementById('post-readtime').textContent = post.readTime;
+          document.getElementById('post-date').textContent = post.date;
+
+          const imgEl = document.getElementById('post-image');
+          // Fallback if image/thumbnail is not defined
+          const mainImgSrc = post.image || post.thumbnail || './assets/blog_NuocHoaCaNhanHoa.jpg';
+          imgEl.src = mainImgSrc;
+          imgEl.alt = post.title;
+          imgEl.style.display = 'block';
+
+          const contentEl = document.getElementById('post-content');
+          contentEl.innerHTML = post.paragraphs
+            .map(p => `<p class="mb-6 text-n-700 leading-relaxed">${p}</p>`)
+            .join('');
+
+          // Render Suggestions (Related Posts - excluding current post, max 3 items)
+          const relatedPosts = posts.filter(p => p.id !== postId).slice(0, 3);
+          const relatedGrid = document.getElementById('related-posts-grid');
+          relatedGrid.innerHTML = '';
+
+          relatedPosts.forEach((rPost, idx) => {
+            const cardHtml = `
+              <article class="blog-card border border-n-100 overflow-hidden bg-white group rounded-lg shadow-sm hover:shadow-md transition-all duration-300" data-aos="fade-up" data-aos-delay="${idx * 100}">
+                <div class="overflow-hidden h-48">
+                  <a href="./blog-detail.html?id=${rPost.id}">
+                    <img src="${rPost.thumbnail || './assets/blog_NuocHoaCaNhanHoa.jpg'}" alt="${rPost.title}"
+                      class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105" />
+                  </a>
+                </div>
+                <div class="p-6">
+                  <p class="text-xs tracking-widest uppercase font-inter text-p-500 mb-2">${rPost.category} · ${rPost.readTime}</p>
+                  <h4 style="font-family:'Cormorant Garamond',serif; font-size:1.3rem; color:hsl(0,0%,10%); font-weight:500; line-height:1.3" class="line-clamp-2 mb-3">
+                    <a href="./blog-detail.html?id=${rPost.id}" class="hover:text-p-500 transition-colors">${rPost.title}</a>
+                  </h4>
+                  <p class="text-n-500 text-sm leading-relaxed line-clamp-2 mb-4">
+                    ${rPost.summary}
+                  </p>
+                  <a href="./blog-detail.html?id=${rPost.id}"
+                    class="inline-flex items-center gap-2 text-xs tracking-widest uppercase font-inter text-p-600 hover:text-p-500 transition-colors">
+                    Đọc Tiếp <svg width="12" height="12" viewBox="0 0 14 14" fill="none">
+                      <path d="M2 7h10M8 3l4 4-4 4" stroke="currentColor" stroke-width="1.5" />
+                    </svg>
+                  </a>
+                </div>
+              </article>
+            `;
+            relatedGrid.insertAdjacentHTML('beforeend', cardHtml);
+          });
+
+          // Refresh AOS animations
+          if (window.AOS) AOS.init({ duration: 700, once: true });
+        })
+        .catch(err => {
+          console.error(err);
+          showErrorPage('Đã xảy ra lỗi khi tải nội dung bài viết.');
+        });
+    });
+
+    function showErrorPage(message) {
+      document.title = 'Lỗi – Không tìm thấy bài viết';
+      const container = document.querySelector('main article');
+      if (container) {
+        container.innerHTML = `
+          <div class="text-center py-16">
+            <h1 class="text-4xl font-normal text-red-500 mb-4">Lỗi</h1>
+            <p class="text-n-500 mb-8">${message}</p>
+            <a href="./blog.html" class="btn">Quay lại Blog</a>
+          </div>
+        `;
+      }
+    }
+  </script>
+</body>
+
+</html>
