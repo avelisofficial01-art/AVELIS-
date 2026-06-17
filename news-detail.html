@@ -5,8 +5,8 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <link rel="icon" type="image/jpeg" href="./assets/avata.jpg">
-  <title>Chi Tiết Bài Viết – AVELIS</title>
-  <meta name="description" content="Chi tiết bài viết từ AVELIS - Nước hoa cá nhân hóa theo cơ địa." />
+  <title>Chi Tiết Tin Tức – AVELIS</title>
+  <meta name="description" content="Chi tiết tin tức mới nhất từ AVELIS - Nước hoa cá nhân hóa theo cơ địa." />
   <link type="text/css" rel="stylesheet" href="./css/showHideNav.css" />
   <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet" />
   <link href="./dist/output.css" rel="stylesheet" />
@@ -42,6 +42,27 @@
     .article-content p:last-child {
       margin-bottom: 0;
     }
+
+    .news-tag {
+      display: inline-block;
+      padding: 2px 10px;
+      font-size: 0.6rem;
+      letter-spacing: 0.2em;
+      text-transform: uppercase;
+      font-family: 'Inter', sans-serif;
+      font-weight: 500;
+      border: 1px solid hsl(43, 74%, 49%);
+      color: hsl(43, 74%, 49%);
+    }
+
+    .news-card {
+      transition: transform 0.3s, box-shadow 0.3s;
+    }
+
+    .news-card:hover {
+      transform: translateY(-4px);
+      box-shadow: 0 12px 32px rgba(0, 0, 0, 0.08);
+    }
   </style>
 </head>
 
@@ -62,8 +83,8 @@
         <nav class="items-center justify-end hidden w-full gap-8 lg:flex">
           <a href="./products.html" class="navLink">Sản Phẩm</a>
           <a href="./about.html" class="navLink">Giới Thiệu</a>
-          <a href="./blog.html" class="navLink" style="color:hsl(43,74%,49%)">Blog</a>
-          <a href="./news.html" class="navLink">Tin Tức</a>
+          <a href="./blog.html" class="navLink">Blog</a>
+          <a href="./news.html" class="navLink" style="color:hsl(43,74%,49%)">Tin Tức</a>
           <a href="./contact.html" class="navLink">Liên Hệ</a>
         </nav>
         <div class="block cursor-pointer lg:hidden" id="toggle_btn">
@@ -90,7 +111,7 @@
       <div class="flex items-center gap-2 text-xs font-inter text-n-500">
         <a href="./index.html" class="hover:text-p-500 transition-colors">Trang Chủ</a>
         <span>·</span>
-        <a href="./blog.html" class="hover:text-p-500 transition-colors">Blog</a>
+        <a href="./news.html" class="hover:text-p-500 transition-colors">Tin Tức</a>
         <span>·</span>
         <span class="text-n-800 line-clamp-1" id="breadcrumb-title">Đang tải...</span>
       </div>
@@ -101,7 +122,7 @@
   <main class="py-12 md:py-20">
     <article class="container mx-auto px-6 max-w-4xl" data-aos="fade-up">
       <!-- Back Button -->
-      <a href="./blog.html" class="inline-flex items-center gap-2 text-xs font-inter tracking-widest uppercase text-p-600 hover:text-p-500 transition-colors mb-8 group">
+      <a href="./news.html" class="inline-flex items-center gap-2 text-xs font-inter tracking-widest uppercase text-p-600 hover:text-p-500 transition-colors mb-8 group">
         <svg class="transform group-hover:-translate-x-1 transition-transform" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
           <line x1="19" y1="12" x2="5" y2="12"></line>
           <polyline points="12 19 5 12 12 5"></polyline>
@@ -112,14 +133,14 @@
       <!-- Article Header -->
       <header class="mb-10">
         <div class="flex items-center gap-3 text-xs font-inter tracking-widest uppercase text-p-500 mb-4">
-          <span id="post-category" class="bg-p-200/50 text-p-600 px-2.5 py-1 rounded">DANH MỤC</span>
+          <span id="post-category" class="news-tag">DANH MỤC</span>
           <span>·</span>
           <span id="post-readtime">5 PHÚT ĐỌC</span>
           <span>·</span>
-          <span id="post-date">17/06/2026</span>
+          <span id="post-date">Tháng 6/2025</span>
         </div>
         <h1 id="post-title" class="text-3xl md:text-5xl lg:text-6xl text-n-900 leading-tight font-normal mb-6">
-          Đang tải bài viết...
+          Đang tải tin tức...
         </h1>
         <div style="width:50px; height:1px; background:hsl(43,74%,49%)"></div>
       </header>
@@ -133,6 +154,11 @@
       <div id="post-content" class="article-content font-inter text-base md:text-lg">
         <!-- Rendered paragraphs will go here -->
       </div>
+
+      <!-- CTA Action Button -->
+      <div id="post-cta-container" class="mt-10 flex gap-4 flex-wrap border-t border-n-100 pt-8" style="display: none;">
+        <!-- CTA buttons will be injected here -->
+      </div>
     </article>
   </main>
 
@@ -141,7 +167,7 @@
     <div class="container mx-auto px-6 max-w-6xl">
       <div class="text-center mb-12" data-aos="fade-up">
         <h2 class="sub_heading">Có Thể Bạn Quan Tâm</h2>
-        <h3 class="main_heading" style="font-size: 2.2rem;">Bài Viết <span class="text-gradient">Liên Quan</span></h3>
+        <h3 class="main_heading" style="font-size: 2.2rem;">Tin Tức <span class="text-gradient">Liên Quan</span></h3>
       </div>
       <div id="related-posts-grid" class="grid grid-cols-1 md:grid-cols-3 gap-6">
         <!-- Suggestions loaded here -->
@@ -161,6 +187,7 @@
             Chủ</a>
           <a href="./products.html" class="text-white/40 hover:text-p-400 text-xs font-inter transition-colors">Sản
             Phẩm</a>
+          <a href="./blog.html" class="text-white/40 hover:text-p-400 text-xs font-inter transition-colors">Blog</a>
           <a href="./contact.html" class="text-white/40 hover:text-p-400 text-xs font-inter transition-colors">Liên
             Hệ</a>
         </div>
@@ -171,25 +198,25 @@
   <script>
     document.addEventListener('DOMContentLoaded', function () {
       const urlParams = new URLSearchParams(window.location.search);
-      const postId = urlParams.get('id');
+      const newsId = urlParams.get('id');
 
-      if (!postId) {
-        showErrorPage('Không tìm thấy tham số bài viết.');
+      if (!newsId) {
+        showErrorPage('Không tìm thấy tham số tin tức.');
         return;
       }
 
-      fetch('./data/blog-posts.json')
+      fetch('./data/news-posts.json')
         .then(res => res.json())
         .then(posts => {
-          const post = posts.find(p => p.id === postId);
+          const post = posts.find(p => p.id === newsId);
 
           if (!post) {
-            showErrorPage('Bài viết không tồn tại.');
+            showErrorPage('Tin tức không tồn tại.');
             return;
           }
 
           // Render Main Post details
-          document.title = `${post.title} – AVELIS | Nước Hoa Cá Nhân Hóa`;
+          document.title = `${post.title} – AVELIS | Tin Tức`;
           document.getElementById('breadcrumb-title').textContent = post.title;
           document.getElementById('post-title').textContent = post.title;
           document.getElementById('post-category').textContent = post.category;
@@ -197,8 +224,7 @@
           document.getElementById('post-date').textContent = post.date;
 
           const imgEl = document.getElementById('post-image');
-          // Fallback if image/thumbnail is not defined
-          const mainImgSrc = post.image || post.thumbnail || './assets/blog_NuocHoaCaNhanHoa.jpg';
+          const mainImgSrc = post.image || post.thumbnail || './assets/heading.jpg';
           imgEl.src = mainImgSrc;
           imgEl.alt = post.title;
           imgEl.style.display = 'block';
@@ -208,34 +234,54 @@
             .map(p => `<p class="mb-6 text-n-700 leading-relaxed">${p}</p>`)
             .join('');
 
+          // Render CTA Buttons if any
+          const ctaContainer = document.getElementById('post-cta-container');
+          let ctaHtml = '';
+          if (post.cta) {
+            const targetAttr = post.cta.external ? 'target="_blank"' : '';
+            ctaHtml += `<a href="${post.cta.link}" ${targetAttr} class="btn">${post.cta.text}</a>`;
+          }
+          if (post.secondaryCta) {
+            const targetAttr = post.secondaryCta.external ? 'target="_blank"' : '';
+            ctaHtml += `<a href="${post.secondaryCta.link}" ${targetAttr} class="btn-outline">${post.secondaryCta.text}</a>`;
+          }
+
+          if (ctaHtml) {
+            ctaContainer.innerHTML = ctaHtml;
+            ctaContainer.style.display = 'flex';
+          }
+
           // Render Suggestions (Related Posts - excluding current post, max 3 items)
-          const relatedPosts = posts.filter(p => p.id !== postId).slice(0, 3);
+          const relatedPosts = posts.filter(p => p.id !== newsId).slice(0, 3);
           const relatedGrid = document.getElementById('related-posts-grid');
           relatedGrid.innerHTML = '';
 
           relatedPosts.forEach((rPost, idx) => {
             const cardHtml = `
-              <article class="blog-card border border-n-100 overflow-hidden bg-white group rounded-lg shadow-sm hover:shadow-md transition-all duration-300" data-aos="fade-up" data-aos-delay="${idx * 100}">
+              <article class="news-card border border-n-100 overflow-hidden bg-white group rounded-lg shadow-sm hover:shadow-md transition-all duration-300" data-aos="fade-up" data-aos-delay="${idx * 100}">
                 <div class="overflow-hidden h-48">
-                  <a href="./blog-detail.html?id=${rPost.id}">
-                    <img src="${rPost.thumbnail || './assets/blog_NuocHoaCaNhanHoa.jpg'}" alt="${rPost.title}"
+                  <a href="./news-detail.html?id=${rPost.id}">
+                    <img src="${rPost.thumbnail || './assets/heading.jpg'}" alt="${rPost.title}"
                       class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105" />
                   </a>
                 </div>
                 <div class="p-6">
-                  <p class="text-xs tracking-widest uppercase font-inter text-p-500 mb-2">${rPost.category} · ${rPost.readTime}</p>
-                  <h4 style="font-family:'Cormorant Garamond',serif; font-size:1.3rem; color:hsl(0,0%,10%); font-weight:500; line-height:1.3" class="line-clamp-2 mb-3">
-                    <a href="./blog-detail.html?id=${rPost.id}" class="hover:text-p-500 transition-colors">${rPost.title}</a>
+                  <span class="news-tag">${rPost.category}</span>
+                  <h4 style="font-family:'Cormorant Garamond',serif; font-size:1.3rem; color:hsl(0,0%,10%); font-weight:500; line-height:1.3; margin-top: 0.5rem;" class="line-clamp-2 mb-3">
+                    <a href="./news-detail.html?id=${rPost.id}" class="hover:text-p-500 transition-colors">${rPost.title}</a>
                   </h4>
                   <p class="text-n-500 text-sm leading-relaxed line-clamp-2 mb-4">
                     ${rPost.summary}
                   </p>
-                  <a href="./blog-detail.html?id=${rPost.id}"
-                    class="inline-flex items-center gap-2 text-xs tracking-widest uppercase font-inter text-p-600 hover:text-p-500 transition-colors">
-                    Đọc Tiếp <svg width="12" height="12" viewBox="0 0 14 14" fill="none">
-                      <path d="M2 7h10M8 3l4 4-4 4" stroke="currentColor" stroke-width="1.5" />
-                    </svg>
-                  </a>
+                  <div class="flex items-center justify-between">
+                    <span class="text-n-400 text-xs font-inter">${rPost.date}</span>
+                    <a href="./news-detail.html?id=${rPost.id}"
+                      class="inline-flex items-center gap-1 text-xs tracking-widest uppercase font-inter text-p-600 hover:text-p-500 transition-colors">
+                      Đọc Tiếp <svg width="12" height="12" viewBox="0 0 14 14" fill="none">
+                        <path d="M2 7h10M8 3l4 4-4 4" stroke="currentColor" stroke-width="1.5" />
+                      </svg>
+                    </a>
+                  </div>
                 </div>
               </article>
             `;
@@ -247,19 +293,19 @@
         })
         .catch(err => {
           console.error(err);
-          showErrorPage('Đã xảy ra lỗi khi tải nội dung bài viết.');
+          showErrorPage('Đã xảy ra lỗi khi tải nội dung tin tức.');
         });
     });
 
     function showErrorPage(message) {
-      document.title = 'Lỗi – Không tìm thấy bài viết';
+      document.title = 'Lỗi – Không tìm thấy tin tức';
       const container = document.querySelector('main article');
       if (container) {
         container.innerHTML = `
           <div class="text-center py-16">
             <h1 class="text-4xl font-normal text-red-500 mb-4">Lỗi</h1>
             <p class="text-n-500 mb-8">${message}</p>
-            <a href="./blog.html" class="btn">Quay lại Blog</a>
+            <a href="./news.html" class="btn">Quay lại Tin Tức</a>
           </div>
         `;
       }

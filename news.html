@@ -87,7 +87,7 @@
 <body>
   <!-- NAV -->
   <header class="relative z-50">
-    <div class="flex items-center justify-center navbar bg-p-50/95 backdrop-blur-sm border-b border-n-100">
+    <div class="flex items-center justify-center navbar nav-transparent bg-p-50/95 backdrop-blur-sm border-b border-n-100">
       <div class="max-w-[1536px] w-full px-6 py-5 md:py-6 md:px-[72px] flex items-center justify-between">
         <a href="./index.html" class="flex items-center gap-3 flex-none">
           <div class="flex flex-col leading-none">
@@ -157,189 +157,14 @@
         <div class="gold-divider mx-auto"></div>
       </div>
 
-      <!-- Featured big card -->
-      <div class="news-card bg-white border border-n-100 overflow-hidden mb-8" data-aos="fade-up">
-        <div class="flex flex-col lg:flex-row">
-          <div class="overflow-hidden lg:w-1/2" style="height:380px">
-            <img src="./assets/heading.jpg" alt="AVELIS Ra Mắt"
-              class="w-full h-full object-cover object-top transition-transform duration-700 hover:scale-105" />
-          </div>
-          <div class="p-8 lg:p-12 flex flex-col justify-center lg:w-1/2">
-            <span class="news-tag">Ra Mắt · Tháng 6/2025</span>
-            <h2
-              style="font-family:'Cormorant Garamond',serif; font-size:clamp(1.8rem,3vw,2.5rem); color:hsl(0,0%,10%); font-weight:400; line-height:1.25; margin-top:0.5rem">
-              AVELIS YOUR SCENT EDP Chính Thức Ra Mắt — Nước Hoa Độc Bản Đầu Tiên Dành Cho Gen Z Việt Nam
-            </h2>
-            <div style="width:35px; height:1px; background:hsl(43,74%,49%); margin:1.25rem 0"></div>
-            <p class="text-n-500 text-sm leading-relaxed mb-6">
-              Sau nhiều tháng phát triển và thử nghiệm, AVELIS chính thức ra mắt dòng sản phẩm <strong>YOUR SCENT
-                EDP</strong> với hai phiên bản FOR HIM và FOR HER. Mỗi chai là một trải nghiệm mùi hương độc nhất — biến
-              đổi theo cơ địa riêng của từng người đeo. Đây là lần đầu tiên một thương hiệu nước hoa Việt Nam ứng dụng
-              công nghệ Personal Chemistry Perfume ở phân khúc đại chúng.
-            </p>
-            <div class="flex gap-3 flex-wrap">
-              <a href="./products.html" class="btn">Xem Sản Phẩm</a>
-              <a href="./contact.html" class="btn-outline">Đặt Hàng Ngay</a>
-            </div>
-          </div>
-        </div>
+      <!-- Featured big card container -->
+      <div id="featured-news-container">
+        <!-- Dynamic content loaded from JSON -->
       </div>
 
-      <!-- Grid news -->
-      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 mt-8">
-
-        <!-- Card 1 -->
-        <article class="news-card bg-white border border-n-100 overflow-hidden" data-aos="fade-up">
-          <div class="overflow-hidden h-52">
-            <img src="./assets/9.jpg" alt="FOR HIM FOR HER"
-              class="w-full h-full object-cover object-top transition-transform duration-500 hover:scale-105" />
-          </div>
-          <div class="p-6">
-            <span class="news-tag">Sản Phẩm</span>
-            <h3
-              style="font-family:'Cormorant Garamond',serif; font-size:1.35rem; color:hsl(0,0%,10%); font-weight:500; line-height:1.3; margin-bottom:0.75rem">
-              FOR HIM & FOR HER — Hai Phiên Bản, Một Triết Lý
-            </h3>
-            <p class="text-n-500 text-sm leading-relaxed mb-4">Phiên bản FOR HIM với whiskey và gỗ sồi mạnh mẽ. FOR HER
-              với lê, nhài và xạ hương thanh lịch. Cùng một thương hiệu, hai cá tính hoàn toàn khác nhau.</p>
-            <div class="flex items-center justify-between">
-              <span class="text-n-400 text-xs font-inter">Tháng 6/2025</span>
-              <a href="./products.html"
-                class="text-xs tracking-widest uppercase font-inter text-p-600 hover:text-p-500 transition-colors flex items-center gap-1">Xem
-                thêm <svg width="10" height="10" viewBox="0 0 14 14" fill="none">
-                  <path d="M2 7h10M8 3l4 4-4 4" stroke="currentColor" stroke-width="1.5" />
-                </svg></a>
-            </div>
-          </div>
-        </article>
-
-        <!-- Card 2 -->
-        <article class="news-card bg-white border border-n-100 overflow-hidden" data-aos="fade-up" data-aos-delay="50">
-          <div class="overflow-hidden h-52">
-            <img src="./assets/12.jpg" alt="Khuyến mãi khai trương"
-              class="w-full h-full object-cover transition-transform duration-500 hover:scale-105" />
-          </div>
-          <div class="p-6">
-            <span class="news-tag">Khuyến Mãi</span>
-            <h3
-              style="font-family:'Cormorant Garamond',serif; font-size:1.35rem; color:hsl(0,0%,10%); font-weight:500; line-height:1.3; margin-bottom:0.75rem">
-              Ưu Đãi Khai Trương — Miễn Phí Shipping Toàn Quốc
-            </h3>
-            <p class="text-n-500 text-sm leading-relaxed mb-4">Nhân dịp ra mắt chính thức, AVELIS tặng miễn phí vận
-              chuyển toàn quốc cho tất cả đơn hàng từ 500.000đ. Thời gian có hạn — đặt hàng ngay hôm nay.</p>
-            <div class="flex items-center justify-between">
-              <span class="text-n-400 text-xs font-inter">Tháng 6/2025</span>
-              <a href="./contact.html"
-                class="text-xs tracking-widest uppercase font-inter text-p-600 hover:text-p-500 transition-colors flex items-center gap-1">Đặt
-                hàng <svg width="10" height="10" viewBox="0 0 14 14" fill="none">
-                  <path d="M2 7h10M8 3l4 4-4 4" stroke="currentColor" stroke-width="1.5" />
-                </svg></a>
-            </div>
-          </div>
-        </article>
-
-        <!-- Card 3 -->
-        <article class="news-card bg-white border border-n-100 overflow-hidden" data-aos="fade-up" data-aos-delay="100">
-          <div class="overflow-hidden h-52">
-            <img src="./assets/10.jpg" alt="Bộ quà tặng"
-              class="w-full h-full object-cover object-top transition-transform duration-500 hover:scale-105" />
-          </div>
-          <div class="p-6">
-            <span class="news-tag">Quà Tặng</span>
-            <h3
-              style="font-family:'Cormorant Garamond',serif; font-size:1.35rem; color:hsl(0,0%,10%); font-weight:500; line-height:1.3; margin-bottom:0.75rem">
-              Bộ Quà Tặng Cá Nhân Hóa — Độc Quyền Cho Dịp Đặc Biệt
-            </h3>
-            <p class="text-n-500 text-sm leading-relaxed mb-4">Hộp quà AVELIS bao gồm chai nước hoa, thiệp viết tay
-              "Crafted For: ___", túi giấy nhám cao cấp và nhãn cá nhân hóa tên người nhận.</p>
-            <div class="flex items-center justify-between">
-              <span class="text-n-400 text-xs font-inter">Tháng 6/2025</span>
-              <a href="./contact.html"
-                class="text-xs tracking-widest uppercase font-inter text-p-600 hover:text-p-500 transition-colors flex items-center gap-1">Tư
-                vấn <svg width="10" height="10" viewBox="0 0 14 14" fill="none">
-                  <path d="M2 7h10M8 3l4 4-4 4" stroke="currentColor" stroke-width="1.5" />
-                </svg></a>
-            </div>
-          </div>
-        </article>
-
-        <!-- Card 4 -->
-        <article class="news-card bg-white border border-n-100 overflow-hidden" data-aos="fade-up">
-          <div class="overflow-hidden h-52">
-            <img src="./assets/3.jpg" alt="AVELIS có mặt trên Shopee"
-              class="w-full h-full object-cover transition-transform duration-500 hover:scale-105" />
-          </div>
-          <div class="p-6">
-            <span class="news-tag">Kênh Bán Hàng</span>
-            <h3
-              style="font-family:'Cormorant Garamond',serif; font-size:1.35rem; color:hsl(0,0%,10%); font-weight:500; line-height:1.3; margin-bottom:0.75rem">
-              Đặt Hàng Qua Zalo & Instagram — Nhanh, Tiện, Uy Tín
-            </h3>
-            <p class="text-n-500 text-sm leading-relaxed mb-4">Hiện tại bạn có thể đặt hàng trực tiếp qua Zalo
-              <strong>0932 182 907</strong> hoặc inbox Instagram AVELIS. Xác nhận đơn trong vòng 30 phút, giao hàng 2–5
-              ngày.
-            </p>
-            <div class="flex items-center justify-between">
-              <span class="text-n-400 text-xs font-inter">Tháng 6/2025</span>
-              <a href="./contact.html"
-                class="text-xs tracking-widest uppercase font-inter text-p-600 hover:text-p-500 transition-colors flex items-center gap-1">Liên
-                hệ <svg width="10" height="10" viewBox="0 0 14 14" fill="none">
-                  <path d="M2 7h10M8 3l4 4-4 4" stroke="currentColor" stroke-width="1.5" />
-                </svg></a>
-            </div>
-          </div>
-        </article>
-
-        <!-- Card 5 -->
-        <article class="news-card bg-white border border-n-100 overflow-hidden" data-aos="fade-up" data-aos-delay="50">
-          <div class="overflow-hidden h-52">
-            <img src="./assets/11.jpg" alt="Review khách hàng"
-              class="w-full h-full object-cover object-top transition-transform duration-500 hover:scale-105" />
-          </div>
-          <div class="p-6">
-            <span class="news-tag">Cộng Đồng</span>
-            <h3
-              style="font-family:'Cormorant Garamond',serif; font-size:1.35rem; color:hsl(0,0%,10%); font-weight:500; line-height:1.3; margin-bottom:0.75rem">
-              Những Người Đầu Tiên Đeo AVELIS — Họ Nói Gì?
-            </h3>
-            <p class="text-n-500 text-sm leading-relaxed mb-4">Hàng chục khách hàng đầu tiên đã nhận sản phẩm và chia sẻ
-              trải nghiệm: "Mùi rất khác khi xịt lên da, ấm hơn, bí ẩn hơn trong chai — đúng nghĩa là mùi của tôi."</p>
-            <div class="flex items-center justify-between">
-              <span class="text-n-400 text-xs font-inter">Tháng 6/2025</span>
-              <a href="https://www.instagram.com/p/DZJ4quxuGCa/" target="_blank"
-                class="text-xs tracking-widest uppercase font-inter text-p-600 hover:text-p-500 transition-colors flex items-center gap-1">Xem
-                trên IG <svg width="10" height="10" viewBox="0 0 14 14" fill="none">
-                  <path d="M2 7h10M8 3l4 4-4 4" stroke="currentColor" stroke-width="1.5" />
-                </svg></a>
-            </div>
-          </div>
-        </article>
-
-        <!-- Card 6 -->
-        <article class="news-card bg-white border border-n-100 overflow-hidden" data-aos="fade-up" data-aos-delay="100">
-          <div class="overflow-hidden h-52">
-            <img src="./assets/8.jpg" alt="Hợp tác thương hiệu"
-              class="w-full h-full object-cover transition-transform duration-500 hover:scale-105" />
-          </div>
-          <div class="p-6">
-            <span class="news-tag">Hợp Tác</span>
-            <h3
-              style="font-family:'Cormorant Garamond',serif; font-size:1.35rem; color:hsl(0,0%,10%); font-weight:500; line-height:1.3; margin-bottom:0.75rem">
-              AVELIS Tìm Kiếm Đối Tác Phân Phối & Collab Thương Hiệu
-            </h3>
-            <p class="text-n-500 text-sm leading-relaxed mb-4">Chúng tôi đang mở cơ hội hợp tác với các cửa hàng thời
-              trang, beauty store và individual reseller. Liên hệ để nhận báo giá sỉ và chính sách đại lý độc quyền.</p>
-            <div class="flex items-center justify-between">
-              <span class="text-n-400 text-xs font-inter">Tháng 6/2025</span>
-              <a href="./contact.html"
-                class="text-xs tracking-widest uppercase font-inter text-p-600 hover:text-p-500 transition-colors flex items-center gap-1">Liên
-                hệ hợp tác <svg width="10" height="10" viewBox="0 0 14 14" fill="none">
-                  <path d="M2 7h10M8 3l4 4-4 4" stroke="currentColor" stroke-width="1.5" />
-                </svg></a>
-            </div>
-          </div>
-        </article>
-
+      <!-- Grid news container -->
+      <div id="news-grid" class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 mt-8">
+        <!-- Dynamic content loaded from JSON -->
       </div>
     </div>
   </section>
@@ -399,7 +224,123 @@
   </footer>
 
   <script>
-    document.addEventListener('DOMContentLoaded', function () { if (window.AOS) AOS.init({ duration: 700, once: true }); });
+    document.addEventListener('DOMContentLoaded', function () {
+      fetch('./data/news-posts.json')
+        .then(res => res.json())
+        .then(posts => {
+          const featuredContainer = document.getElementById('featured-news-container');
+          const newsGrid = document.getElementById('news-grid');
+          if (!featuredContainer || !newsGrid) return;
+
+          featuredContainer.innerHTML = '';
+          newsGrid.innerHTML = '';
+
+          if (posts.length === 0) {
+            newsGrid.innerHTML = '<p class="text-center text-n-500 py-10 w-full col-span-3">Không có tin tức nào.</p>';
+            return;
+          }
+
+          // Featured post: first post in the array
+          const featuredPost = posts[0];
+          let featuredCtaHtml = '';
+          if (featuredPost.cta) {
+            const targetAttr = featuredPost.cta.external ? 'target="_blank"' : '';
+            featuredCtaHtml += `<a href="${featuredPost.cta.link}" ${targetAttr} class="btn">${featuredPost.cta.text}</a>`;
+          }
+          if (featuredPost.secondaryCta) {
+            const targetAttr = featuredPost.secondaryCta.external ? 'target="_blank"' : '';
+            featuredCtaHtml += `<a href="${featuredPost.secondaryCta.link}" ${targetAttr} class="btn-outline">${featuredPost.secondaryCta.text}</a>`;
+          }
+          if (!featuredCtaHtml) {
+            featuredCtaHtml = `<a href="./news-detail.html?id=${featuredPost.id}" class="btn">Xem chi tiết</a>`;
+          }
+
+          featuredContainer.innerHTML = `
+            <div class="news-card bg-white border border-n-100 overflow-hidden mb-8" data-aos="fade-up">
+              <div class="flex flex-col lg:flex-row">
+                <div class="overflow-hidden lg:w-1/2 h-[380px]">
+                  <a href="./news-detail.html?id=${featuredPost.id}">
+                    <img src="${featuredPost.image || featuredPost.thumbnail || './assets/heading.jpg'}" alt="${featuredPost.title}"
+                      class="w-full h-full object-cover object-top transition-transform duration-700 hover:scale-105" />
+                  </a>
+                </div>
+                <div class="p-8 lg:p-12 flex flex-col justify-center lg:w-1/2">
+                  <div>
+                    <span class="news-tag">${featuredPost.category} · ${featuredPost.date}</span>
+                  </div>
+                  <h2 style="font-family:'Cormorant Garamond',serif; font-size:clamp(1.8rem,3vw,2.5rem); color:hsl(0,0%,10%); font-weight:400; line-height:1.25; margin-top:0.5rem">
+                    <a href="./news-detail.html?id=${featuredPost.id}" class="hover:text-p-500 transition-colors">${featuredPost.title}</a>
+                  </h2>
+                  <div style="width:35px; height:1px; background:hsl(43,74%,49%); margin:1.25rem 0"></div>
+                  <p class="text-n-500 text-sm leading-relaxed mb-6">
+                    ${featuredPost.summary}
+                  </p>
+                  <div class="flex gap-3 flex-wrap">
+                    ${featuredCtaHtml}
+                    <a href="./news-detail.html?id=${featuredPost.id}" class="btn-outline">Xem chi tiết</a>
+                  </div>
+                </div>
+              </div>
+            </div>
+          `;
+
+          // Grid posts: the rest of the array
+          const gridPosts = posts.slice(1);
+          gridPosts.forEach((post, index) => {
+            let actionLink = `./news-detail.html?id=${post.id}`;
+            let actionText = 'Đọc Tiếp';
+            let targetAttr = '';
+
+            if (post.cta) {
+              actionLink = post.cta.link;
+              actionText = post.cta.text;
+              if (post.cta.external) {
+                targetAttr = 'target="_blank"';
+              }
+            }
+
+            const cardHtml = `
+              <article class="news-card bg-white border border-n-100 overflow-hidden flex flex-col" data-aos="fade-up" data-aos-delay="${(index % 3) * 50}">
+                <div class="overflow-hidden h-52">
+                  <a href="./news-detail.html?id=${post.id}">
+                    <img src="${post.thumbnail || './assets/heading.jpg'}" alt="${post.title}"
+                      class="w-full h-full object-cover object-top transition-transform duration-500 hover:scale-105" />
+                  </a>
+                </div>
+                <div class="p-6 flex-1 flex flex-col justify-between">
+                  <div>
+                    <span class="news-tag">${post.category}</span>
+                    <h3 style="font-family:'Cormorant Garamond',serif; font-size:1.35rem; color:hsl(0,0%,10%); font-weight:500; line-height:1.3; margin-bottom:0.75rem; margin-top:0.5rem" class="line-clamp-2">
+                      <a href="./news-detail.html?id=${post.id}" class="hover:text-p-500 transition-colors">${post.title}</a>
+                    </h3>
+                    <p class="text-n-500 text-sm leading-relaxed mb-4 line-clamp-3">${post.summary}</p>
+                  </div>
+                  <div class="flex items-center justify-between mt-auto pt-4 border-t border-n-50">
+                    <span class="text-n-400 text-xs font-inter">${post.date}</span>
+                    <div class="flex gap-2">
+                      <a href="./news-detail.html?id=${post.id}" class="text-xs font-inter text-p-600 hover:text-p-500 transition-colors">Xem chi tiết</a>
+                      <span class="text-n-300">|</span>
+                      <a href="${actionLink}" ${targetAttr} class="text-xs font-inter text-p-600 hover:text-p-500 transition-colors flex items-center gap-1">
+                        ${actionText}
+                        <svg width="10" height="10" viewBox="0 0 14 14" fill="none">
+                          <path d="M2 7h10M8 3l4 4-4 4" stroke="currentColor" stroke-width="1.5" />
+                        </svg>
+                      </a>
+                    </div>
+                  </div>
+                </div>
+              </article>
+            `;
+            newsGrid.insertAdjacentHTML('beforeend', cardHtml);
+          });
+
+          if (window.AOS) AOS.init({ duration: 700, once: true });
+        })
+        .catch(err => {
+          console.error('Error loading news posts:', err);
+          document.getElementById('news-grid').innerHTML = '<p class="text-center text-red-500 py-10 w-full col-span-3">Không thể tải danh sách tin tức. Vui lòng thử lại sau.</p>';
+        });
+    });
   </script>
 </body>
 
