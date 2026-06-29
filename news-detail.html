@@ -230,9 +230,14 @@
           imgEl.style.display = 'block';
 
           const contentEl = document.getElementById('post-content');
-          contentEl.innerHTML = post.paragraphs
+          let contentHtml = post.paragraphs
             .map(p => `<p class="mb-6 text-n-700 leading-relaxed">${p}</p>`)
             .join('');
+
+          if (post.source) {
+            contentHtml += `<p class="mt-8 text-sm text-n-500 italic font-inter text-right">Nguồn: ${post.source}</p>`;
+          }
+          contentEl.innerHTML = contentHtml;
 
           // Render CTA Buttons if any
           const ctaContainer = document.getElementById('post-cta-container');
@@ -259,10 +264,10 @@
           relatedPosts.forEach((rPost, idx) => {
             const cardHtml = `
               <article class="news-card border border-n-100 overflow-hidden bg-white group rounded-lg shadow-sm hover:shadow-md transition-all duration-300" data-aos="fade-up" data-aos-delay="${idx * 100}">
-                <div class="overflow-hidden h-48">
-                  <a href="./news-detail.html?id=${rPost.id}">
+                <div class="overflow-hidden h-48 bg-p-50/50 flex items-center justify-center">
+                  <a href="./news-detail.html?id=${rPost.id}" class="w-full h-full flex items-center justify-center">
                     <img src="${rPost.thumbnail || './assets/heading.jpg'}" alt="${rPost.title}"
-                      class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105" />
+                      class="max-w-full max-h-full object-contain transition-transform duration-500 group-hover:scale-105" />
                   </a>
                 </div>
                 <div class="p-6">

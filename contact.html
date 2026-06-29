@@ -103,7 +103,8 @@
 <body>
   <!-- NAV -->
   <header class="relative z-50">
-    <div class="flex items-center justify-center navbar nav-transparent bg-p-50/95 backdrop-blur-sm border-b border-n-100">
+    <div
+      class="flex items-center justify-center navbar nav-transparent bg-p-50/95 backdrop-blur-sm border-b border-n-100">
       <div class="max-w-[1536px] w-full px-6 py-5 md:py-6 md:px-[72px] flex items-center justify-between">
         <a href="./index.html" class="flex items-center gap-3 flex-none">
           <div class="flex flex-col leading-none">
@@ -149,7 +150,7 @@
         Liên Hệ <em style="font-style:italic; color:hsl(43,74%,65%)">AVELIS</em>
       </h1>
       <p class="text-white/40 text-xs tracking-widest uppercase font-inter mt-3" data-aos="fade-up"
-        data-aos-delay="200">Đặt hàng · Tư vấn · Quà tặng cá nhân hóa</p>
+        data-aos-delay="200">Đặt hàng · Tư vấn · Đánh giá sản phẩm</p>
     </div>
   </section>
 
@@ -225,8 +226,8 @@
                   <path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z" />
                 </svg>
               </a>
-              <a href="https://www.instagram.com/p/DZJ4quxuGCa/?igsh=MTBvNnNrcnF4ZWw2dQ==" target="_blank"
-                id="contact-instagram" class="border border-n-200 p-3 hover:border-p-500 transition-all group">
+              <a href="https://www.instagram.com/avelis026/" target="_blank" id="contact-instagram"
+                class="border border-n-200 p-3 hover:border-p-500 transition-all group">
                 <svg width="16" height="16" fill="none" stroke="hsl(40,2%,15%)" stroke-width="2"
                   class="group-hover:stroke-amber-500 transition-colors" viewBox="0 0 24 24">
                   <rect x="2" y="2" width="20" height="20" rx="5" />
@@ -291,11 +292,15 @@
                 <select id="contact-subject" class="form-input">
                   <option value="">Chọn chủ đề...</option>
                   <option value="order">Đặt Hàng</option>
-                  <option value="gift">Quà Tặng Cá Nhân Hóa</option>
+                  <option value="gift">Đánh giá sản phẩm</option>
                   <option value="consult">Tư Vấn Mùi Hương</option>
                   <option value="wholesale">Hợp Tác / Bán Sỉ</option>
                   <option value="other">Khác</option>
                 </select>
+              </div>
+              <div class="md:col-span-2">
+                <label class="form-label" for="contact-address">Địa chỉ</label>
+                <input type="text" id="contact-address" class="form-input" placeholder="Số nhà, tên đường, phường/xã, quận/huyện, tỉnh/thành phố..." />
               </div>
             </div>
             <div>
@@ -308,10 +313,6 @@
                 <label class="flex items-center gap-2 cursor-pointer">
                   <input type="checkbox" id="check-her" name="product" value="forher" class="accent-amber-500" /> <span
                     class="text-sm font-inter text-n-600">FOR HER</span>
-                </label>
-                <label class="flex items-center gap-2 cursor-pointer">
-                  <input type="checkbox" id="check-set" name="product" value="set" class="accent-amber-500" /> <span
-                    class="text-sm font-inter text-n-600">Bộ Quà Tặng</span>
                 </label>
               </div>
             </div>
@@ -431,9 +432,16 @@
     //    → Copy "Service ID" dán vào EMAILJS_SERVICE_ID bên dưới
     // 3. Email Templates → Create Template:
     //    Subject: "[AVELIS] Tin nhắn từ {{from_name}}"
-    //    Body: Từ: {{from_name}} | Email: {{reply_to}} | SDT: {{phone}}
-    //          Chủ đề: {{subject}} | Sản phẩm: {{products}}
-    //          Nội dung: {{message}}
+    //    Body:
+    //          Từ: {{from_name}}
+    //          Email: {{reply_to}}
+    //          SĐT: {{phone}}
+    //          Địa chỉ: {{address}}
+    //          Chủ đề: {{subject}}
+    //          Sản phẩm: {{products}}
+    //
+    //          Nội dung:
+    //          {{message}}
     //    → Copy "Template ID" dán vào EMAILJS_TEMPLATE_ID bên dưới
     // 4. Account → General → Copy "Public Key" dán vào EMAILJS_PUBLIC_KEY
     // ============================================================
@@ -477,6 +485,7 @@
         from_name: document.getElementById('contact-name').value,
         reply_to: document.getElementById('contact-email').value,
         phone: document.getElementById('contact-phone').value || 'Không có',
+        address: document.getElementById('contact-address').value || 'Không có',
         subject: document.getElementById('contact-subject').value || 'Không rõ',
         products: products,
         message: document.getElementById('contact-message').value,

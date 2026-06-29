@@ -87,11 +87,12 @@
 <body>
   <!-- NAV -->
   <header class="relative z-50">
-    <div class="flex items-center justify-center navbar nav-transparent bg-p-50/95 backdrop-blur-sm border-b border-n-100">
+    <div
+      class="flex items-center justify-center navbar nav-transparent bg-p-50/95 backdrop-blur-sm border-b border-n-100">
       <div class="max-w-[1536px] w-full px-6 py-5 md:py-6 md:px-[72px] flex items-center justify-between">
         <a href="./index.html" class="flex items-center gap-3 flex-none">
           <div class="flex flex-col leading-none">
-            <span class="logo-title"
+            <span
               style="font-family:'Cormorant Garamond',serif; font-size:1.6rem; font-weight:600; letter-spacing:0.25em; color:hsl(0,0%,10%)">AVELIS</span>
             <span
               style="font-size:0.55rem; letter-spacing:0.35em; text-transform:uppercase; color:hsl(43,74%,49%); font-family:'Inter',sans-serif; margin-top:1px">Your
@@ -189,7 +190,7 @@
             </svg>
             Theo Dõi Facebook
           </a>
-          <a href="https://www.instagram.com/p/DZJ4quxuGCa/" target="_blank" class="btn"
+          <a href="https://www.instagram.com/avelis026/" target="_blank" class="btn"
             style="background:transparent; border-color:rgba(255,255,255,0.25); display:inline-flex; align-items:center; gap:8px">
             <svg width="14" height="14" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
               <rect x="2" y="2" width="20" height="20" rx="5" />
@@ -258,11 +259,8 @@
           featuredContainer.innerHTML = `
             <div class="news-card bg-white border border-n-100 overflow-hidden mb-8" data-aos="fade-up">
               <div class="flex flex-col lg:flex-row">
-                <div class="overflow-hidden lg:w-1/2 h-[380px]">
-                  <a href="./news-detail.html?id=${featuredPost.id}">
-                    <img src="${featuredPost.image || featuredPost.thumbnail || './assets/heading.jpg'}" alt="${featuredPost.title}"
-                      class="w-full h-full object-cover object-top transition-transform duration-700 hover:scale-105" />
-                  </a>
+                <div class="overflow-hidden lg:w-1/2 h-[380px] bg-n-50" style="background-image:url('${featuredPost.image || featuredPost.thumbnail || './assets/heading.jpg'}'); background-size:contain; background-repeat:no-repeat; background-position:center;">
+                  <a href="./news-detail.html?id=${featuredPost.id}" class="block w-full h-full"></a>
                 </div>
                 <div class="p-8 lg:p-12 flex flex-col justify-center lg:w-1/2">
                   <div>
@@ -301,11 +299,8 @@
 
             const cardHtml = `
               <article class="news-card bg-white border border-n-100 overflow-hidden flex flex-col" data-aos="fade-up" data-aos-delay="${(index % 3) * 50}">
-                <div class="overflow-hidden h-52">
-                  <a href="./news-detail.html?id=${post.id}">
-                    <img src="${post.thumbnail || './assets/heading.jpg'}" alt="${post.title}"
-                      class="w-full h-full object-cover object-top transition-transform duration-500 hover:scale-105" />
-                  </a>
+                <div class="overflow-hidden h-52 bg-n-50" style="background-image:url('${post.thumbnail || './assets/heading.jpg'}'); background-size:contain; background-repeat:no-repeat; background-position:center;">
+                  <a href="./news-detail.html?id=${post.id}" class="block w-full h-full"></a>
                 </div>
                 <div class="p-6 flex-1 flex flex-col justify-between">
                   <div>
